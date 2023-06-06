@@ -1,27 +1,23 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { NameModule } from './name/name.module';
+import { CommonModule } from '@angular/common';
+import { VariablesComponent } from './variables/variables.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [VariablesComponent],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NameModule,
+    CommonModule,
 
     // material
     MatDialogModule,
     MatButtonModule,
     MatIconModule,
     MatDividerModule,
+    MatCardModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class NameModule {}
