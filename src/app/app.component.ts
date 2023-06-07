@@ -8,14 +8,7 @@ import { VariablesComponent } from './name/variables/variables.component';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'prodacts';
-  name: any;
-  count: any;
-  constructor(public dialog: MatDialog) {
-    this.name = ['shahid', 'jawad', 'waseeem'];
-    this.name.push('AWais', 'Lahore');
-    this.count = this.name.lenth;
-  }
+  constructor(public dialog: MatDialog) {}
   openDialog(enterAnimationDuration: string, exitAnimationDuration: string) {
     this.dialog.open(VariablesComponent, {
       width: '500',

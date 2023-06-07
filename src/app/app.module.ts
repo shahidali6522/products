@@ -7,9 +7,13 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { MatInputModule } from '@angular/material/input';
+import { Comp1Component } from './comp1/comp1.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, HomeComponent, AboutComponent, Comp1Component],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -20,6 +24,7 @@ import { MatDividerModule } from '@angular/material/divider';
     MatButtonModule,
     MatIconModule,
     MatDividerModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
