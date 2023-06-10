@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { MatInputModule } from '@angular/material/input';
 import { Comp1Component } from './comp1/comp1.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, AboutComponent, Comp1Component],
@@ -18,6 +19,7 @@ import { Comp1Component } from './comp1/comp1.component';
     BrowserModule,
     AppRoutingModule,
     NameModule,
+    FormsModule,
 
     // material
     MatDialogModule,
