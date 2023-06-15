@@ -13,9 +13,10 @@ import { MatInputModule } from '@angular/material/input';
 import { Comp1Component } from './comp1/comp1.component';
 import { MatTableModule } from '@angular/material/table';
 import { FormsModule } from '@angular/forms';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, Comp1Component],
+  declarations: [AppComponent, HomeComponent, Comp1Component, ProductComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
