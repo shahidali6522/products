@@ -1,13 +1,72 @@
-<div class="flex w-full justify-center w">
-  <div>
-    <mat-card class="h-56 w-96">
-      <div class="flex justify-between text-center p-1 cursor-pointer">
-        <div>
-          <h1 class="pl-1">Shahid Ali</h1>
-        </div>
-        <p mat-dialog-close><mat-icon>close</mat-icon></p>
+<div class="w-full justify-center h-1/2 pb-2">
+  <div class="rounded-full">
+    <div
+      class="flex justify-between text-center cursor-pointer w-auto bg-slate-500 p-2 text-slate-200"
+    >
+      <div>
+        <h1 class="pl-1">Presented By G.M</h1>
       </div>
-      <mat-card-content> </mat-card-content>
-    </mat-card>
+      <p mat-dialog-close><mat-icon>close</mat-icon></p>
+    </div>
+
+    <form class="w-full p-4">
+      <div class="grid gap-6 mb-6 md:grid-cols-2">
+        <div>
+          <label class="block mb-2 text-sm font-medium text-gray-400"
+            >First name</label
+          >
+          <input
+            type="text"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            name="first_name"
+            [(ngModel)]="information.first_name"
+          />
+        </div>
+        <div>
+          <label class="block mb-2 text-sm font-medium text-gray-400"
+            >Last name</label
+          >
+          <input
+            type="text"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            required
+            [(ngModel)]="information.last_name"
+            name="last_name"
+          />
+        </div>
+        <div>
+          <label class="block mb-2 text-sm font-medium text-gray-400"
+            >Product name</label
+          >
+          <input
+            type="text"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            required
+            [(ngModel)]="information.product_Name"
+            name="product_Name"
+          />
+        </div>
+        <div>
+          <label class="block mb-2 text-sm font-medium text-gray-400"
+            >Phone number</label
+          >
+          <input
+            type="text"
+            [maxLength]="11"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            mask="(000) 000-0000"
+            required
+            name="phone_Number"
+            [(ngModel)]="information.phone_Number"
+          />
+        </div>
+      </div>
+
+      <div class="flex justify-end">
+        <button class="btn" (click)="save()" mat-fab extended color="accent">
+          Save
+        </button>
+      </div>
+    </form>
   </div>
 </div>

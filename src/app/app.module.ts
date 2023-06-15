@@ -8,13 +8,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
+
 import { MatInputModule } from '@angular/material/input';
 import { Comp1Component } from './comp1/comp1.component';
+import { MatTableModule } from '@angular/material/table';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, AboutComponent, Comp1Component],
+  declarations: [AppComponent, HomeComponent, Comp1Component],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -27,6 +28,7 @@ import { FormsModule } from '@angular/forms';
     MatIconModule,
     MatDividerModule,
     MatInputModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
