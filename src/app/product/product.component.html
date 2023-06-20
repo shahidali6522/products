@@ -138,8 +138,9 @@
     </div>
     <div>
       <button (click)="interpolation()" mat-raised-button color="primary">
-        {{ appStatus ? "Edit" : "Save" }}
+        {{ appStatus ? "Off" : "On" }}
       </button>
+      <img src="{{ appStatus ? [Edit] : [Save] }}" alt="" />
     </div>
   </div>
 </div>

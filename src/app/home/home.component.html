@@ -1,19 +1,32 @@
-<div>
-  <div class="flex space-x-2 pt-2">
-    <button
-      class="bg-slate-800 rounded-2xl text-white font-semibold p-1"
-      (click)="onOff()"
-    >
-      off
-    </button>
-    <button
-      class="bg-slate-800 rounded-2xl text-white font-semibold p-1"
-      (click)="ontwo()"
-    >
-      on
-    </button>
+<div class="flex p-2 px-5 space-x-2">
+  <!-- two button -->
+  <div>
+    <div>
+      <p><img class="w-48 h-48" src="{{ nameOff }}" alt="" /></p>
+    </div>
+    <div class="flex justify-center pt-2 space-x-2">
+      <button
+        class="bg-slate-800 rounded-2xl text-white font-semibold p-1"
+        (click)="onOff()"
+      >
+        off
+      </button>
+      <button
+        class="bg-slate-800 rounded-2xl text-white font-semibold p-1"
+        (click)="ontwo()"
+      >
+        on
+      </button>
+    </div>
   </div>
-</div>
-<div>
-  <p><img class="w-60 h-60" src="{{ nameOff }}" alt="" /></p>
+  <!-- singel button  -->
+  <div class="flex-wrap justify-center">
+    <img class="h-48 w-48" src="{{ changeimage ? [on] : [off] }}" alt="" />
+
+    <div class="flex justify-center pt-2">
+      <button (click)="changeOnAndOff()" mat-raised-button color="primary">
+        {{ changeimage ? "ON" : "OFF" }}
+      </button>
+    </div>
+  </div>
 </div>

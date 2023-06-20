@@ -69,4 +69,6 @@ export class ProductComponent {
   interpolation() {
     this.appStatus = !this.appStatus;
   }
+  Edit: string = '../../assets/lightImages/off.jpg';
+  Save: string = '../../assets/lightImages/on.jpg';
 }
