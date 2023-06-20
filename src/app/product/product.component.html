@@ -1,3 +1,145 @@
 <div class="p-6">
-  <p>{{ name }}</p>
+  <div class="flex items-center space-x-2">
+    <!-- only Number -->
+    <div>
+      <p>Number value</p>
+      <input
+        [(ngModel)]="phoneNumber"
+        name="phoneNumber"
+        placeholder=" Number"
+        type="number"
+        class="block w-52 p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      />
+      <div class="flex items-center mt-2 space-x-2">
+        <button
+          (click)="onlyNumber()"
+          type="button"
+          class="px-1.5 py-2.5 rounded-full text-xs font-medium text-center text-white bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700"
+        >
+          <p class="uppercase">get <strong>Number</strong></p>
+        </button>
+        <p>:{{ number }}</p>
+      </div>
+    </div>
+    <!-- Only text -->
+    <div>
+      Text value
+      <input
+        [(ngModel)]="name"
+        name="name"
+        placeholder="Text"
+        type="text"
+        class="block w-52 p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      />
+      <div class="flex items-center mt-2 space-x-2">
+        <button
+          (click)="OnlyText()"
+          type="button"
+          class="px-1.5 py-2.5 rounded-full text-xs font-medium text-center text-white bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700"
+        >
+          <p class="uppercase">get <strong>Text</strong></p>
+        </button>
+        <p>:{{ getnameValue }}</p>
+      </div>
+    </div>
+    <!-- Loop  -->
+    <div>
+      <div>
+        <p class="flex justify-center">Exponentiation</p>
+        <div class="flex space-x-2">
+          <input
+            [(ngModel)]="getthree"
+            name="name"
+            placeholder="Number"
+            autocomplete="off"
+            type="text"
+            class="block w-52 p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          />
+          <input
+            [(ngModel)]="getfour"
+            name="name"
+            placeholder="Number"
+            autocomplete="off"
+            type="text"
+            class="block w-52 p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          />
+        </div>
+        <div class="flex items-center justify-center mt-2">
+          <button
+            (click)="exponentiation()"
+            type="button"
+            class="px-1.5 py-2.5 rounded-full text-xs font-medium text-center text-white bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700"
+          >
+            <p class="uppercase">
+              Expo <span class="font-extrabold lowercase">nent</span> iation
+            </p>
+          </button>
+          <div class="px-1">
+            <p>: {{ Output || validvalue }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- voot  -->
+    <div>
+      <p>Match Color</p>
+      <input
+        placeholder="Number"
+        autocomplete="off"
+        type="text"
+        [(ngModel)]="color"
+        name="color"
+        class="block w-52 p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      />
+      <div class="flex space-x-2 example-button-container mt-3">
+        <button
+          (click)="clickVoot()"
+          class="btn"
+          type="button"
+          mat-fab
+          extended
+          color="accent"
+        >
+          get color
+        </button>
+        <div [ngSwitch]="getColor">
+          <p
+            *ngSwitchCase="'red'"
+            class="bg-red-600 text-white px-1 rounded-lg uppercase"
+          >
+            {{ getColor }}
+          </p>
+          <p
+            *ngSwitchCase="'green'"
+            class="bg-green-600 px-1 text-white rounded-lg uppercase"
+          >
+            {{ getColor }}
+          </p>
+          <p
+            *ngSwitchCase="'blue' | uppercase"
+            class="bg-blue-600 px-1 text-white rounded-lg uppercase"
+          >
+            {{ getColor }}
+          </p>
+          <p *ngSwitchDefault>{{ wrrongvlaue }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- interpolation -->
+  <div class="mt-3 flex space-x-3 items-center">
+    <div>
+      <button
+        disabled
+        class="px-1.5 py-2.5 rounded-full text-xs font-medium text-center text-white bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700"
+      >
+        interpolation
+      </button>
+    </div>
+    <div>
+      <button (click)="interpolation()" mat-raised-button color="primary">
+        {{ appStatus ? "Edit" : "Save" }}
+      </button>
+    </div>
+  </div>
 </div>

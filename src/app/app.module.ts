@@ -12,7 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { MatInputModule } from '@angular/material/input';
 import { Comp1Component } from './comp1/comp1.component';
 import { MatTableModule } from '@angular/material/table';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductComponent } from './product/product.component';
 
 @NgModule({
@@ -21,6 +21,7 @@ import { ProductComponent } from './product/product.component';
     BrowserModule,
     AppRoutingModule,
     NameModule,
+    ReactiveFormsModule,
     FormsModule,
 
     // material

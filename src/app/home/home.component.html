@@ -1,12 +1,19 @@
-<div class="p-2">
-  <form class="example-form space-x-4">
-    <mat-form-field class="example-full-width">
-      <mat-label>One Number</mat-label>
-      <input matInput placeholder="One Number" />
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-      <mat-label>Two Number</mat-label>
-      <input matInput placeholder="two Number" />
-    </mat-form-field>
-  </form>
+<div>
+  <div class="flex space-x-2 pt-2">
+    <button
+      class="bg-slate-800 rounded-2xl text-white font-semibold p-1"
+      (click)="onOff()"
+    >
+      off
+    </button>
+    <button
+      class="bg-slate-800 rounded-2xl text-white font-semibold p-1"
+      (click)="ontwo()"
+    >
+      on
+    </button>
+  </div>
+</div>
+<div>
+  <p><img class="w-60 h-60" src="{{ nameOff }}" alt="" /></p>
 </div>
