@@ -13,6 +13,8 @@
       />
       <div class="flex items-center mt-2 space-x-2">
         <button
+          mat-flat-button
+          color="accent"
           (click)="onlyNumber()"
           type="button"
           class="px-1.5 py-2.5 rounded-full text-xs font-medium text-center text-white bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700"
@@ -95,6 +97,7 @@
       <div class="flex space-x-2 example-button-container mt-3">
         <button
           (click)="clickVoot()"
+          [disabled]="color.length <= 0"
           class="btn"
           type="button"
           mat-fab
@@ -144,8 +147,7 @@
       <p>{{ vl }}</p>
       <div class="mt-2">
         <button
-          [disabled]="disabled"
-          *ngIf="btn.length >= 1 || disabled == true"
+          [disabled]="btn.length <= 0"
           (click)="showvalue()"
           mat-flat-button
           color="warn"

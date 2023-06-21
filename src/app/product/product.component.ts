@@ -8,7 +8,7 @@ import { flush, tick } from '@angular/core/testing';
 export class ProductComponent {
   //only Number
   phoneNumber: any;
-  number: number = 0;
+  number: any;
   // Only text
   name: any;
   getnameValue = 'text';
@@ -30,7 +30,7 @@ export class ProductComponent {
   //only Number
   onlyNumber() {
     if (!isNaN(this.phoneNumber)) {
-      this.number = this.phoneNumber;
+      this.number = !this.phoneNumber;
     }
   }
 
@@ -61,8 +61,8 @@ export class ProductComponent {
   }
   // disabled value
   btn: string = '';
-  disabled: boolean = false;
-  vl: string = '';
+  vl: any;
+
   showvalue() {
     this.vl = this.btn;
   }
