@@ -3,8 +3,11 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
+  p: boolean = true;
+
   // // blub whit Two button On Off
   nameOff: any = false;
   imageone = '../../assets/lightImages/off.jpg';
@@ -15,9 +18,9 @@ export class HomeComponent {
   on: string = '../../assets/lightImages/on.jpg';
   constructor() {
     this.onOff();
-    // setInterval(() => {
-    //   this.changeOnAndOff();
-    // }, 1000);
+    setInterval(() => {
+      this.p = !this.p;
+    }, 1000);
   }
   // blub whit Two button On Off
   onOff() {

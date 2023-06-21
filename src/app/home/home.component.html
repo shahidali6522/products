@@ -22,7 +22,6 @@
   <!-- singel button  -->
   <div class="flex-wrap justify-center">
     <img class="h-48 w-48" src="{{ changeimage ? [on] : [off] }}" alt="" />
-
     <div class="flex justify-center pt-2">
       <button (click)="changeOnAndOff()" mat-raised-button color="primary">
         {{ changeimage ? "ON" : "OFF" }}
@@ -30,3 +29,4 @@
     </div>
   </div>
 </div>
+<div class="flex"><p [class.P]="p">shahid</p></div>

@@ -9,11 +9,9 @@ export class ProductComponent {
   //only Number
   phoneNumber: any;
   number: number = 0;
-
   // Only text
   name: any;
   getnameValue = 'text';
-
   // OutPut two number
   getthree: number = 0;
   getfour: number = 0;
@@ -21,16 +19,11 @@ export class ProductComponent {
   Totelvalue = 'Totel value';
   validvalue: string = 'No data Found';
   please: string = 'please Add bought value';
-
-  // get Months Name
-
+  // get Color
   color: string = '';
   getColor: any;
   wrrongvlaue: string = 'unkonw Color';
   enterValue = 'please Enter value';
-
-  // interpolation
-  appStatus: boolean = false;
 
   constructor() {}
 
@@ -66,9 +59,11 @@ export class ProductComponent {
       this.wrrongvlaue;
     }
   }
-  interpolation() {
-    this.appStatus = !this.appStatus;
+  // disabled value
+  btn: string = '';
+  disabled: boolean = false;
+  vl: string = '';
+  showvalue() {
+    this.vl = this.btn;
   }
-  Edit: string = '../../assets/lightImages/off.jpg';
-  Save: string = '../../assets/lightImages/on.jpg';
 }
