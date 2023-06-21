@@ -30,6 +30,8 @@ export class ProductComponent {
   // addcardmessage
   addcardmessage: string = '';
   tv: any;
+  // toggle button
+  istoggle: boolean = false;
 
   constructor() {}
 
@@ -75,5 +77,9 @@ export class ProductComponent {
   nname: any;
   freezerClick(name: any) {
     this.nname = name.name;
+  }
+  // }Toggle button
+  toggle() {
+    this.istoggle = !this.istoggle;
   }
 }

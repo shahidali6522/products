@@ -14,6 +14,7 @@ import { Comp1Component } from './comp1/comp1.component';
 import { MatTableModule } from '@angular/material/table';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductComponent } from './product/product.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, Comp1Component, ProductComponent],
@@ -31,6 +32,7 @@ import { ProductComponent } from './product/product.component';
     MatDividerModule,
     MatInputModule,
     MatTableModule,
+    MatSlideToggleModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
