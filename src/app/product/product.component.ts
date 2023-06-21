@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { flush, tick } from '@angular/core/testing';
 
 @Component({
   selector: 'app-product',
@@ -24,6 +23,13 @@ export class ProductComponent {
   getColor: any;
   wrrongvlaue: string = 'unkonw Color';
   enterValue = 'please Enter value';
+
+  // disabled value
+  btn: string = '';
+  vl: any;
+  // addcardmessage
+  addcardmessage: string = '';
+  tv: any;
 
   constructor() {}
 
@@ -51,7 +57,7 @@ export class ProductComponent {
   }
 
   // Switch Case
-  clickVoot() {
+  clickcolor() {
     if (this.color.length > 0) {
       this.getColor = this.color || this.enterValue;
       this.color = '';
@@ -59,11 +65,15 @@ export class ProductComponent {
       this.wrrongvlaue;
     }
   }
-  // disabled value
-  btn: string = '';
-  vl: any;
 
   showvalue() {
     this.vl = this.btn;
+  }
+  onClick(event: any) {
+    this.addcardmessage = 'click  ' + event.target.value;
+  }
+  nname: any;
+  freezerClick(name: any) {
+    this.nname = name.name;
   }
 }

@@ -1,5 +1,6 @@
 <div class="p-6">
   <!-- section One   -->
+
   <div class="flex items-center space-x-2">
     <!-- only Number -->
     <div>
@@ -96,7 +97,7 @@
       />
       <div class="flex space-x-2 example-button-container mt-3">
         <button
-          (click)="clickVoot()"
+          (click)="clickcolor()"
           [disabled]="color.length <= 0"
           class="btn"
           type="button"
@@ -155,6 +156,30 @@
           Show
         </button>
       </div>
+    </div>
+  </div>
+
+  <!-- function get value  -->
+
+  <div>
+    <div class="flex items-center space-x-2 mt-2">
+      <button value="tv" (click)="onClick($event)">TV</button>
+      <button color="accent" value="Laptop" (click)="onClick($event)">
+        Laptop
+      </button>
+      <button
+        #freezer
+        type="text"
+        value="Freezer"
+        name="Freezer"
+        (click)="freezerClick(freezer)"
+      >
+        freezer
+      </button>
+    </div>
+    <div>
+      <p>{{ addcardmessage | uppercase }}</p>
+      <p>{{ nname }}</p>
     </div>
   </div>
 </div>
