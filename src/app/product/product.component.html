@@ -133,42 +133,56 @@
   </div>
   <!-- section two  -->
 
-  <div class="mt-3 flex space-x-3 items-center">
-    <!-- Disabel and enable -->
-    <div>
-      <p>Button disabled</p>
-      <input
-        placeholder="btn vlaue"
-        [(ngModel)]="btn"
-        name="btn"
-        autocomplete="off"
-        type="text"
-        class="block w-52 p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-      />
-      <p>{{ vl }}</p>
-      <div class="mt-2">
-        <button
-          [disabled]="btn.length <= 0"
-          (click)="showvalue()"
-          mat-flat-button
-          color="warn"
-        >
-          Show
-        </button>
+  <div class="flex space-x-2 pt-3">
+    <div class="mt-3 flex space-x-3 items-center">
+      <!-- Disabel and enable -->
+      <div>
+        <p>Button disabled</p>
+        <input
+          placeholder="btn vlaue"
+          [(ngModel)]="btn"
+          name="btn"
+          autocomplete="off"
+          type="text"
+          class="block w-52 p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        />
+        <p>{{ vl }}</p>
+        <div class="mt-2">
+          <button
+            [disabled]="btn.length <= 0"
+            (click)="showvalue()"
+            mat-flat-button
+            color="warn"
+          >
+            Show
+          </button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- function get value  -->
+    <!-- function get value  -->
 
-  <div class="flex space-x-2">
     <div>
       <div class="flex items-center space-x-2 mt-2">
-        <button value="tv" (click)="onClick($event)">TV</button>
-        <button color="accent" value="Laptop" (click)="onClick($event)">
+        <!-- TV  -->
+        <button
+          value="tv"
+          class="p-1 px-2 bg-red-600 text-white rounded-xl"
+          (click)="onClick($event)"
+        >
+          TV
+        </button>
+        <!-- laptop -->
+        <button
+          class="p-1 px-2 bg-red-600 text-white rounded-xl"
+          value="Laptop"
+          (click)="onClick($event)"
+        >
           Laptop
         </button>
+        <!-- Freezer  -->
         <button
+          class="p-1 px-2 bg-red-600 text-white rounded-xl"
           #freezer
           type="text"
           value="Freezer"
@@ -206,6 +220,30 @@
           <p>No Back you yet right away</p>
         </div>
       </ng-template>
+    </div>
+    <!-- select value  -->
+    <div>
+      <div class="flex space-x-2 items-center">
+        <button
+          class="p-1 px-2 bg-black text-white rounded-xl"
+          (click)="getvalue($event)"
+        >
+          Tv
+        </button>
+        <button
+          class="p-1 px-2 bg-black text-white rounded-xl"
+          (click)="getvalue($event)"
+        >
+          AC
+        </button>
+        <button
+          class="p-1 px-2 bg-black text-white rounded-xl"
+          (click)="getvalue($event)"
+        >
+          Home
+        </button>
+      </div>
+      <p>{{ display }}</p>
     </div>
   </div>
 </div>

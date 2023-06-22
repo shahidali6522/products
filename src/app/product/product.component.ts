@@ -33,6 +33,8 @@ export class ProductComponent {
   // toggle button
   istoggle: boolean = false;
 
+  // selected Value
+
   constructor() {}
 
   //only Number
@@ -81,5 +83,10 @@ export class ProductComponent {
   // }Toggle button
   toggle() {
     this.istoggle = !this.istoggle;
+  }
+  // selected Value
+  display: string = '';
+  getvalue(val: any) {
+    this.display = val.target.innerText;
   }
 }
