@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AppModule } from '../app.module';
+import { throwDialogContentAlreadyAttachedError } from '@angular/cdk/dialog';
 
 @Component({
   selector: 'app-product',
@@ -6,8 +8,8 @@ import { Component } from '@angular/core';
 })
 export class ProductComponent {
   //only Number
-  phoneNumber: any;
-  number: any;
+  phoneNumber: number = 0;
+  number: number = 0;
   // Only text
   name: any;
   getnameValue = 'text';
@@ -32,15 +34,21 @@ export class ProductComponent {
   tv: any;
   // toggle button
   istoggle: boolean = false;
+  // get value in input and push in select array
+  selectOne: any;
 
-  // selected Value
-
+  va = [];
+  namelist = [{ name: 'pakistan' }];
+  getinputvalue() {
+    // this.namelist.push([{this.selectOne:name}]);
+    // this.va = this.namelist;
+  }
   constructor() {}
 
   //only Number
   onlyNumber() {
     if (!isNaN(this.phoneNumber)) {
-      this.number = !this.phoneNumber;
+      this.number = this.phoneNumber;
     }
   }
 
@@ -88,5 +96,11 @@ export class ProductComponent {
   display: string = '';
   getvalue(val: any) {
     this.display = val.target.innerText;
+  }
+  getinputval(name: any) {
+    name.value;
+  }
+  submait(val: any) {
+    console.warn(val.value);
   }
 }
