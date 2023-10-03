@@ -16,9 +16,10 @@ import { ProductComponent } from './product/product.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { DatabindingComponent } from './databinding/databinding.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, Comp1Component, ProductComponent],
+  declarations: [AppComponent, HomeComponent, Comp1Component, ProductComponent, DatabindingComponent],
   imports: [
     NameModule,
     FormsModule,

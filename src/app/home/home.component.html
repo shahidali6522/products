@@ -1,4 +1,35 @@
-<div class="flex p-2 px-5 space-x-2">
+<div class="flex justify-between p-2 px-5 space-x-2">
+  <div>
+    <p>Wellcome:{{ dynName }}</p>
+  </div>
+  <div>
+    <button (click)="redcolor()">clic</button>
+    <div class="border h-44 w-16 rounded-xl bg-black">
+      <div class="grid grid-flow-col justify-center pt-4">
+        <p class="blankcolor" [class.red]="redlight"></p>
+      </div>
+      <div class="flex justify-center py-2">
+        <p [class.yellow]="yellowlight" class="blankcolor"></p>
+      </div>
+      <div class="flex justify-center">
+        <p [class.green]="greenlight" class="blankcolor"></p>
+      </div>
+    </div>
+  </div>
+  <!-- auto ON Off -->
+  <div class="flex-wrap justify-center">
+    <img class="h-48 w-48" src="{{ autoChane ? on : off }}" alt="" />
+  </div>
+
+  <!-- singel button  -->
+  <div class="flex-wrap justify-center">
+    <img class="h-48 w-48" src="{{ changeimage ? [on] : [off] }}" alt="" />
+    <div class="flex justify-center pt-2">
+      <button (click)="changeOnAndOff()" mat-raised-button color="primary">
+        {{ changeimage ? "ON" : "OFF" }}
+      </button>
+    </div>
+  </div>
   <!-- two button -->
   <div>
     <div>
@@ -19,14 +50,5 @@
       </button>
     </div>
   </div>
-  <!-- singel button  -->
-  <div class="flex-wrap justify-center">
-    <img class="h-48 w-48" src="{{ changeimage ? [on] : [off] }}" alt="" />
-    <div class="flex justify-center pt-2">
-      <button (click)="changeOnAndOff()" mat-raised-button color="primary">
-        {{ changeimage ? "ON" : "OFF" }}
-      </button>
-    </div>
-  </div>
 </div>
-<div class="flex"><p [class.P]="p">shahid</p></div>
+<div class="flex"><p [class.P1]="p1" [class.p2]="p2">shahid</p></div>

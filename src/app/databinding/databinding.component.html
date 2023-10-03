@@ -1,0 +1,22 @@
+<div class="flex px-4 gap-4">
+  <div>
+    <button
+      (click)="click()"
+      class="bg-orange-400 p-0.5 rounded-md text-white hover:text-black"
+    >
+      click me
+    </button>
+    <p class="font-medium">
+      {{ vereable ? dyn : name }}
+    </p>
+  </div>
+
+  <div>
+    <p class="boxName" [class.mystyle]="mystyle" (click)="changecolor()">
+      Shahid
+    </p>
+  </div>
+  <div class="star">
+    <p class="">Text Portrait with css</p>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+.boxName {
+  background-color: olive;
+  padding: 5px;
+  border-radius: 12%;
+}
+.boxName:hover {
+  background-color: rosybrown;
+  cursor: pointer;
+}
+.mystyle {
+  background-color: aqua !important;
+}
+.mystyle:hover {
+  background-color: yellow !important;
+}
+.star {
+  font-family: "Raboto", sans-serif;
+}
